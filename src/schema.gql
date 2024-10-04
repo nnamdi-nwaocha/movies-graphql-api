@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type MovieModel {
+  id: Int!
+  title: String!
+  description: String!
+  year: Int!
+  rating: Float!
+}
+
+type Query {
+  movies: [MovieModel!]!
+  movieById(id: Int!): MovieModel!
+}
+
+type Mutation {
+  createMovie(createMovieInput: CreateMovieInput!): MovieModel!
+  updateMovie(updateMovieInput: UpdateMovieInput!): MovieModel!
+  removeMovie(id: Int!): MovieModel!
+}
+
+input CreateMovieInput {
+  title: String!
+  description: String!
+  year: Int!
+  rating: Float!
+}
+
+input UpdateMovieInput {
+  title: String
+  description: String
+  year: Int
+  rating: Float
+  id: Int!
+}
